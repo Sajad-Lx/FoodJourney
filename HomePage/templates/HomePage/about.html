@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 {% block title %}Food Journey: About{% endblock %}
-{% block content %}
 {% load static %}
-<main id="main">
+{% block css %}
+<link rel="stylesheet" href="{% static 'assets/css/except.css' %}" />
+{% endblock css %}
+{% block content %}
+<main id="main" class="p-top">
     <section id="about" class="about">
         <div class="container-fluid">
             <div class="row">
@@ -49,4 +52,8 @@
         </div>
     </section>
 </main>
+{% block script %}
+<script src="{% static 'assets/js/except.js' %}"></script>
+{% endblock script %}
+
 {% endblock %}

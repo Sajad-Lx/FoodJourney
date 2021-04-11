@@ -33,7 +33,8 @@
     />
 
     <!-- Base Main CSS file -->
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/base.css' %}" />
+    {% block css %}{% endblock css %}
 
     <!-- FIXME Favicons -->
     <link
@@ -52,19 +53,8 @@
   </head>
 
   <body>
-    <!-- Top Bar -->
-    <section
-      id="topbar"
-      class="d-none d-lg-flex align-items-center fixed-top topbar-transparent"
-    >
-      <div class="container text-right">
-        <a href="tel:+11234567890"
-          ><i class="icofont-phone"></i>+1 1234567890 &nbsp;&nbsp;&nbsp;</a
-        >
-        <i class="icofont-clock-time icofont-rotate-180"></i> Mon-Sat: 10:00 AM
-        - 23:00 PM
-      </div>
-    </section>
+    
+    {% block topBar %}{% endblock topBar %}
 
     <!-- Header -->
     <header
@@ -123,7 +113,7 @@
           >. All Rights Reserved
         </div>
         <div class="credits">
-          Designed by <a href="#">OrionXD</a>
+          Designed by <a href="https://github.com/Sajad-Lx" target="_blank">OrionXD</a>
         </div>
       </div>
     </footer>
@@ -141,5 +131,6 @@
     <script src="{% static 'libs/venobox/venobox.min.js' %}"></script>
     <script src="{% static 'libs/owl.carousel/owl.carousel.min.js' %}"></script>
     <script src="{% static 'assets/js/base.js' %}"></script>
+    {% block script %}{% endblock script %}
   </body>
 </html>
