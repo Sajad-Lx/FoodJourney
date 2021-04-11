@@ -57,41 +57,8 @@
     {% block topBar %}{% endblock topBar %}
 
     <!-- Header -->
-    <header
-      id="header"
-      class="fixed-top d-flex align-items-center header-transparent"
-    >
-      <div class="container d-flex align-items-center">
-        <div class="logo mr-auto">
-          <h1 class="text-light">
-            <a href="{% url 'HomePage:index' %}"><span>Food Journey</span></a>
-          </h1>
-        </div>
-        <!-- NavBar -->
-        <nav class="nav-menu d-none d-lg-block">
-          <ul>
-            <li class="{{ index_active }}">
-              <a href="{% url 'HomePage:index' %}">Home</a>
-            </li>
-            <li class="{{ about_active }}">
-              <a href="{% url 'HomePage:about' %}">About</a>
-            </li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#specials">Specials</a></li>
-            <!-- <li><a href="#events">Events</a></li> -->
-            <li><a href="#chefs">Chefs</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li class="{{ contact_active }}">
-              <a href="{% url 'HomePage:contact' %}">Contact</a>
-            </li>
-            <li class="book-a-table text-center">
-              <a href="#book-a-table">Book a table</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
+    {% block header %}{% endblock header %}
+    
     {% block content %}{%endblock%}
 
     <!-- ======= Footer ======= -->

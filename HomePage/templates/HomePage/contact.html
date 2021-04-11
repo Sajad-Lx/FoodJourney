@@ -3,6 +3,39 @@
 {% block css %}
 <link rel="stylesheet" href="{% static 'assets/css/except.css' %}" />
 {% endblock css %}
+
+{% block header %}
+    <header
+      id="header"
+      class="fixed-top d-flex align-items-center header-transparent"
+    >
+      <div class="container d-flex align-items-center">
+        <div class="logo mr-auto">
+          <h1 class="text-light">
+            <a href="{% url 'HomePage:index' %}"><span>Food Journey</span></a>
+          </h1>
+        </div>
+        <!-- NavBar -->
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+            <li class="{{ index_active }}">
+              <a href="{% url 'HomePage:index' %}">Home</a>
+            </li>
+            <li class="{{ about_active }}">
+              <a href="{% url 'HomePage:about' %}">About</a>
+            </li>
+            <li class="{{ contact_active }}">
+              <a href="{% url 'HomePage:contact' %}">Contact</a>
+            </li>
+            <li class="book-a-table text-center">
+              <a href="#book-a-table">Book a table</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+{% endblock header %}
+
 {% block content %}
 <main id="main" class="p-top">
   <!-- ======= Contact Section ======= -->
