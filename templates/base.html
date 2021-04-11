@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is food order and delivery app where you can order the food and get it delivered to home."
+    />
+    <meta name="keywords" content="food delivery, order food" />
+
+    <!-- CSS lib file -->
+    <!-- <link rel="stylesheet" href="{% static 'assets/normalize.css' %}"> -->
+    <link
+      rel="stylesheet"
+      href="{% static 'libs/bootstrap/css/bootstrap.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'libs/icofont/icofont.min.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'libs/boxicons/css/boxicons.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'libs/animate.css/animate.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'libs/venobox/venobox.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'libs/owl.carousel/assets/owl.carousel.min.css' %}"
+    />
+
+    <!-- Base Main CSS file -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+
+    <!-- FIXME Favicons -->
+    <link
+      rel="shortcut icon"
+      href="{% static 'img/favicon.ico' %}"
+      type="image/x-icon"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i"
+    />
+
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+
+  <body>
+    <!-- Top Bar -->
+    <section
+      id="topbar"
+      class="d-none d-lg-flex align-items-center fixed-top topbar-transparent"
+    >
+      <div class="container text-right">
+        <a href="tel:+11234567890"
+          ><i class="icofont-phone"></i>+1 1234567890 &nbsp;&nbsp;&nbsp;</a
+        >
+        <i class="icofont-clock-time icofont-rotate-180"></i> Mon-Sat: 10:00 AM
+        - 23:00 PM
+      </div>
+    </section>
+
+    <!-- Header -->
+    <header
+      id="header"
+      class="fixed-top d-flex align-items-center header-transparent"
+    >
+      <div class="container d-flex align-items-center">
+        <div class="logo mr-auto">
+          <h1 class="text-light">
+            <a href="{% url 'HomePage:index' %}"><span>Food Journey</span></a>
+          </h1>
+        </div>
+        <!-- NavBar -->
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+            <li class="{{ index_active }}">
+              <a href="{% url 'HomePage:index' %}">Home</a>
+            </li>
+            <li class="{{ about_active }}">
+              <a href="{% url 'HomePage:about' %}">About</a>
+            </li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#specials">Specials</a></li>
+            <!-- <li><a href="#events">Events</a></li> -->
+            <li><a href="#chefs">Chefs</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li class="{{ contact_active }}">
+              <a href="{% url 'HomePage:contact' %}">Contact</a>
+            </li>
+            <li class="book-a-table text-center">
+              <a href="#book-a-table">Book a table</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    {% block content %}{%endblock%}
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container">
+        <h3>Food Journey</h3>
+        <p>
+          Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni
+          eligendi fuga maxime saepe commodi placeat.
+        </p>
+        <div class="social-links">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+        <div class="copyright">
+          &copy; Copyright <strong><span>Food Journey</span></strong
+          >. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="#">OrionXD</a>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+    <!-- All the required Scripts -->
+    <script src="{% static 'libs/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'libs/jquery.easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'libs/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'libs/jquery-sticky/jquery.sticky.js' %}"></script>
+    <script src="{% static 'libs/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'libs/venobox/venobox.min.js' %}"></script>
+    <script src="{% static 'libs/owl.carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/base.js' %}"></script>
+  </body>
+</html>
